@@ -5,7 +5,6 @@ import agent from "../agent";
 import { ITEM_FAVORITED, ITEM_UNFAVORITED } from "../constants/actionTypes";
 import placeholderImg from "../imgs/placeholder.png";
 
-
 const mapDispatchToProps = (dispatch) => ({
   favorite: (slug) =>
     dispatch({
@@ -38,7 +37,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image == "" ? placeholderImg : item.image}
+        src={item.image === "" ? placeholderImg : item.image}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
